@@ -1,7 +1,6 @@
 name: "Github Environment Variables"
 on:
   workflow_dispatch:
-  push:
 
 jobs:
   get-env:
@@ -11,14 +10,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Get environment variables
-        uses: Sumit007521/Repo1/github-env@main
+        uses: Sumit007521/Repo1/github-env@feature/getEnv
         with:
           repo: "Sumit007521/hello-world-JS-action"
-          env_name: "development"
-          gh_token: ${{ secrets.GH_TOKEN }}
+          # env_name: "development"
+          # gh_token: ${{ secrets.GH_TOKEN }}
 
-      - name: Upload environment variables
-        uses: actions/upload-artifact@v4
-        with:
-            name: env_var
-            path: env_var.json    
+      # - name: Upload environment variables
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #       name: env_var
+      #       path: env_var.json    
