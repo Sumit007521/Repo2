@@ -18,7 +18,9 @@ jobs:
 
       - name: Print Files
         shell: bash
-        run: ls     
+        run: |
+          ls
+          cat env_var.json   
 
       # - name: Upload environment variables
       #   uses: actions/upload-artifact@v4
