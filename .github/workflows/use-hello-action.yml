@@ -1,0 +1,21 @@
+name: Use Hello Composite Action
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name to greet'
+        required: false
+        default: 'World'
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Use Hello Name Composite Action
+        uses: Sonu-001/Repo1/greet-action@main
+        with:
+          name: ${{ github.event.inputs.name }}

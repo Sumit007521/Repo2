@@ -1,0 +1,23 @@
+name: "Github Environment Variables"
+on:
+  workflow_dispatch:
+
+jobs:
+  get-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get environment variables
+        uses: Sonu-001/Repo1/github-env@main
+        with:
+          repo: "procter-gamble/mw-mt-always-en-gb"
+          env_name: "mw-mt-always-en-gb-development"
+          gh_token: ${{ secrets.GH_TOKEN }}
+
+      - name: Upload environment variables
+        uses: actions/upload-artifact@v4
+        with:
+            name: env_var
+            path: env_var.json    

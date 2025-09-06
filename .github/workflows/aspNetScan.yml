@@ -1,0 +1,20 @@
+name: "ASP Net Scan"
+on:
+  workflow_dispatch:
+
+jobs:
+    scanning:
+        runs-on: ubuntu-latest
+        steps:
+            - name: CHeckout Repo
+              uses: actions/checkout@v4
+
+            - name: Run ASP Net Scan
+              uses: Sonu-001/Repo1/AspNetVersionScan@main
+              with:
+                urls: 
+                    https://oral-b.co.in/en-in
+                    https://oralb.com.br/pt-br
+                    https://oralb.co.kr
+                    https://oralb.ru/ru-ru
+                
