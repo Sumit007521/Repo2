@@ -1,7 +1,6 @@
 name: "Github Environment Variables"
 on:
   workflow_dispatch:
-  push:
 
 jobs:
   get-env:
