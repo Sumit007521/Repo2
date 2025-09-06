@@ -13,8 +13,8 @@ jobs:
       - name: Get environment variables
         uses: Sumit007521/Repo1/github-env@main
         with:
-          repo: "procter-gamble/mw-mt-always-en-gb"
-          env_name: "mw-mt-always-en-gb-development"
+          repo: "Sumit007521/hello-world-JS-action"
+          env_name: "development"
           gh_token: ${{ secrets.GH_TOKEN }}
 
       - name: Upload environment variables
