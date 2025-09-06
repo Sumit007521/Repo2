@@ -1,6 +1,7 @@
 name: Use Hello Composite Action
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       name:
@@ -16,6 +17,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Use Hello Name Composite Action
-        uses: Sonu-001/Repo1/greet-action@main
+        uses: Sumit007521/Repo1/greet-action@main
         with:
           name: ${{ github.event.inputs.name }}
