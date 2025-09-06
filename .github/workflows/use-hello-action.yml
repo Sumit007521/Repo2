@@ -1,7 +1,6 @@
 name: Use Hello Composite Action
 
 on:
-  push:
   workflow_dispatch:
     inputs:
       name:
