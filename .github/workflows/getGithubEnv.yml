@@ -20,10 +20,15 @@ jobs:
         shell: bash
         run: |
           ls
-          cat env_var.json   
+          cat env_var.json  
+          
+      - name: Access Environment Variables
+        shell: bash
+        run: |
+          echo "Environment Variables: $VAR1, $VAR2"   
 
-      # - name: Upload environment variables
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #       name: env_var
-      #       path: env_var.json    
+      - name: Upload environment variables
+        uses: actions/upload-artifact@v4
+        with:
+            name: env_var
+            path: env_var.json    
