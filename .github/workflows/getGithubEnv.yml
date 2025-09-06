@@ -16,6 +16,10 @@ jobs:
           env_name: "development"
           # gh_token: ${{ secrets.GH_TOKEN }}
 
+      - name: Print Files
+        shell: bash
+        run: ls     
+
       # - name: Upload environment variables
       #   uses: actions/upload-artifact@v4
       #   with:
