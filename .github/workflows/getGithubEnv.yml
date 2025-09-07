@@ -15,6 +15,7 @@ jobs:
           repo: "Sumit007521/hello-world-JS-action"
           env_name: "development"
           gh_token: ${{ secrets.GH_TOKEN }}
+          file_type: "env"
 
       - name: Print Files
         shell: bash
