@@ -13,7 +13,7 @@ jobs:
         uses: Sumit007521/Repo1/github-env@feature/getEnv
         with:
           repo: "Sumit007521/hello-world-JS-action"
-          env_name: "production"
+          env_name: "staging"
           gh_token: ${{ secrets.GH_TOKEN }}
 
       - name: Print Files
