@@ -34,4 +34,4 @@ jobs:
             name: env_var
             path: |
               env_var.json 
-              .env   
+              env_var.txt   
