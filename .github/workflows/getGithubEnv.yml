@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Get environment variables
-        uses: Sumit007521/Repo1/github-env@feature/getEnv
+        uses: Sumit007521/getEnvVars@feature/update
         with:
           repo: "Sumit007521/hello-world-JS-action"
           env_name: "development"
